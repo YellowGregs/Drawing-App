@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 [DEFAULT]
 BASEURL=http://www.small-icons.com/packs/24x24-free-pixel-icons.htm
 [InternetShortcut]
 URL=http://www.small-icons.com/packs/24x24-free-pixel-icons.htm
+=======
+[DEFAULT]
+BASEURL=http://www.small-icons.com/packs/24x24-free-pixel-icons.htm
+[InternetShortcut]
+URL=http://www.small-icons.com/packs/24x24-free-pixel-icons.htm
+>>>>>>> b481005599562804bf6c9bf196b60fb9f19c7707
