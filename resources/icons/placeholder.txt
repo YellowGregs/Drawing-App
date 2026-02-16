@@ -1,0 +1,27 @@
+This directory is for application icons that i need to add later
+- new.png
+- open.png
+- save.png
+- undo.png
+- redo.png
+- cut.png
+- copy.png
+- paste.png
+- brush.png
+- pen.png
+- pencil.png
+- eraser.png
+- line.png
+- rectangle.png
+- ellipse.png
+- polygon.png
+- select.png
+- text.png
+- fill.png
+- zoom-in.png
+- zoom-out.png
+- layer-new.png
+- layer-delete.png
+- print.png
+
+Size: 24x24 or 32x32 pixels
