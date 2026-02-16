@@ -124,11 +124,9 @@ void LayerManager::mergeDown()
     Layer *currentLayer = m_layers[m_currentLayerIndex];
     Layer *belowLayer = m_layers[m_currentLayerIndex - 1];
     
-    // Composite current layer onto layer below
     Layer::composite(*belowLayer->getImage(), *currentLayer->getImage(),
                     currentLayer->getBlendMode(), currentLayer->getOpacity());
     
-    // Remove current layer
     removeLayer(m_currentLayerIndex);
     m_currentLayerIndex--;
     
@@ -143,12 +141,10 @@ void LayerManager::flattenImage()
     
     QImage flattened = getCompositeImage();
     
-    // Clear all layers except first
     while (m_layers.count() > 1) {
         delete m_layers.takeLast();
     }
     
-    // Replace first layer with flattened image
     *m_layers[0]->getImage() = flattened;
     m_layers[0]->setName("Background");
     m_layers[0]->setOpacity(1.0);
@@ -165,7 +161,6 @@ QImage LayerManager::getCompositeImage() const
     QImage composite(m_documentSize, QImage::Format_ARGB32);
     composite.fill(Qt::transparent);
     
-    // Composite layers from bottom to top
     for (const Layer *layer : m_layers) {
         if (layer->isVisible()) {
             Layer::composite(composite, *layer->getImage(),
@@ -175,3 +170,4 @@ QImage LayerManager::getCompositeImage() const
     
     return composite;
 }
+
